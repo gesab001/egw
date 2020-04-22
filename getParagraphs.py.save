@@ -1,0 +1,40 @@
+import sqlite3
+import json
+import os
+
+json_data = {"AA" :[{"filename": "1.json", "page": "1", "paragraph": "1", "word": "hello"}]}
+os.mkdir("jsonbooks")
+def getEGWBooks(book):
+    filename = book + ".js"
+    db = sqlite3.connect('egw_writings_complete.db')
+    cursor = db.cursor()
+    query = "select BOOKCODE, PAGE, PARAGRAPH, WORD from egw_writings_complete where BOOKCODE='"+ book +"'"
+    cursor.execute(query)
+    rows = cursor.fetchall()
+    count = 1
+    d
+    for row in rows:
+        bookCode = row[0]
+        page = row[1]
+        paragraph = row[2]
+        word = '"' + row[3] + '"'
+        item = {}
+        item["filename"] = filename
+        item["bookCode"] = bookCode
+        item["page"] = page
+        item["paragraph"] = paragraph
+        item["word"] = word 
+        print(bookCode)
+        print(page)
+        print(paragraph)
+        print(word)
+        json_data[book].append(item)
+    f = open(filename, "w")
+    f.write(data)
+    f.close()
+    db.close()
+
+books = ["AA", "DA", "CG", "CD", "Ed", "1MCP", "2MCP", "PP", "PK", "MH", "GC", "LDE", "CL"]
+for x in books: 
+  getEGWBooks(x)
+

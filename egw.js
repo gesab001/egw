@@ -1,3 +1,12 @@
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
 
 function startTime() {
 
@@ -28,7 +37,7 @@ var xhttp = new XMLHttpRequest();
 var xmlDoc;
 var nodesLengthList = [];
 
-var books = ["BAN", "DA", "CD", "CG", "Ed", "1MCP", "2MCP", "PP", "PK", "AA", "MH", "GC", "LDE", "POLITICS", "SPORTS", "CL"];
+var books = ["BAN", "DA", "CG", "CD", "Ed", "1MCP", "2MCP", "PP", "PK", "AA", "MH", "GC", "LDE", "POLITICS", "SPORTS", "CL"];
 var bookTitles = [];
 bookTitles.push("Birthdays, Anniversaries, New Year");
 bookTitles.push("Desire of Ages");
@@ -78,7 +87,7 @@ xhttp.onreadystatechange = function() {
     document.getElementById("error").innerHTML = this.status.toString();
 
 };
-xhttp.open("GET", "https://egw.onecloudapps.net/test.xml", true);
+xhttp.open("GET", "test.xml", true);
 xhttp.send();
 
 
