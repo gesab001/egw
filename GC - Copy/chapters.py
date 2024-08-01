@@ -2,11 +2,11 @@ import json
 import os
 
 bookcode = "GC"
-chapterT = "Luther's Separation From Rome"
-chapterN = 7
-startFileNumber = 298
-startPage = 120
-newPage = 145
+chapterT = "Protest of the Princes"
+chapterN = 11
+startFileNumber = 527
+startPage = 197
+newPage = 211
 
 files = os.listdir()
 jsonfiles = []
