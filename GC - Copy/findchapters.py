@@ -7,6 +7,12 @@ bookcode = "GC"
 files = os.listdir()
 jsonfiles = []
 jsonfiles.sort()
+
+chapterT = "The Bible and the French Revolution"
+chapterN = 15
+startFileNumber = 720
+startPage = 265
+newPage = 289
 for f in files:
   if f.endswith("json"):
      jsonfiles.append(f)
@@ -23,26 +29,43 @@ for x in range(569, totalfiles+1):
   
   command = "notepad++ " + filename
   #proceed = input("next paragraph?")
-  if page in word:
+  if "Chap." in word:
      print(word)
      print("page: " + page)
      print("filename: " + filename)
      print(filename)
      print(command)
+     regexString = "Chap. [0-9]+ - [a-zA-Z\s?']+[\n]+" 
+     
+     chapterT = re.search(regexString, word).group()     
+     regexString = "Chap. [0-9]+ - "
+     replacedChapterT = re.sub(regexString, "", chapterT).strip() 
+     
+     print("chapterT = " + '"' + replacedChapterT + '"')
+     regexString = "Chap. [0-9]+"
+     chapterN = re.search(regexString, chapterT).group()    
+     chapterN = chapterN.replace("Chap. ", "")
+     print("chapterN = " + chapterN )
+     startFileNumber = x
+     print("startFileNumber = " + str(startFileNumber))
+     startPage = page
+     print("startPage = " + startPage)
+     
+     """     
      subprocess.call(command, shell=True)     
      regexString = "\n\s+"+ str(int(page)+1) + "[\n]*" 
      replacedWord = re.sub(regexString, "", word).strip() 
-     #print(replacedWord)
 
      jsonobj["word"] = replacedWord
      print(jsonobj)
      with open(filename, "w") as outfile:
        json.dump(jsonobj, outfile) 
      subprocess.call(command, shell=True)
-
+     """
      proceed = input("continue?")
      if proceed=="n":
         break
+  """
   try:
    if str(int(page)+1) in word:
      print(word)
@@ -65,3 +88,4 @@ for x in range(569, totalfiles+1):
         break
   except:
      print("not a number")  
+  """   
