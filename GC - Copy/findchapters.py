@@ -19,7 +19,7 @@ for f in files:
      
 print(len(jsonfiles))
 totalfiles = len(jsonfiles)
-for x in range(569, totalfiles+1):
+for x in range(1351, totalfiles+1):
   filename = "book_"+bookcode+"_id_"+str(x)+".json"
   f = open(filename, "r")
   jsonobj = json.loads(f.read())
