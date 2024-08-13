@@ -19,7 +19,7 @@ for f in files:
      
 print(len(jsonfiles))
 totalfiles = len(jsonfiles)
-for x in range(1351, totalfiles+1):
+for x in range(1, totalfiles+1):
   filename = "book_"+bookcode+"_id_"+str(x)+".json"
   f = open(filename, "r")
   jsonobj = json.loads(f.read())
@@ -51,8 +51,9 @@ for x in range(1351, totalfiles+1):
      startPage = page
      print("startPage = " + startPage)
      
-     """     
+          
      subprocess.call(command, shell=True)     
+     """
      regexString = "\n\s+"+ str(int(page)+1) + "[\n]*" 
      replacedWord = re.sub(regexString, "", word).strip() 
 
