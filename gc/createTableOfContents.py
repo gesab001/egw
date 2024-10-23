@@ -12,5 +12,5 @@ for x in jsonobj["chapters"]:
 
 jsonobj["toc"] = chaptertitles
 
-with open("gc2.json", "w") as outfile:
+with open("gc.json", "w") as outfile:
     json.dump(jsonobj, outfile, indent=4)
