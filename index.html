@@ -1,0 +1,162 @@
+<html>
+
+<body>	
+<div id="egw_paragraph"></div>
+<div id="egw_paragraph_reference"></div>
+
+</body>
+
+</html>
+<script>
+
+const queryString = window.location.search;
+console.log(queryString);
+const urlParams = new URLSearchParams(queryString);
+const topic = urlParams.get('topic');
+console.log(topic);
+
+function fetchEGWBookList(_topic){
+	  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+			var egwBooklist = JSON.parse(this.responseText)["items"];
+			var bookcode = "";
+			var total = 0;
+			var currentID = 0;
+			for (x=0; x<egwBooklist.length; x++){
+				_bookcode = egwBooklist[x]["bookcode"];
+				if (_topic.toLowerCase()==_bookcode.toLowerCase()){
+  				  console.log("match " + _bookcode);
+				  bookcode = _bookcode;
+				  total = egwBooklist[x]["total"];
+				}
+			}
+			currentID = getCurrentEgwId(bookcode, total);
+			console.log("currentID: " + currentID);
+			
+			showEgwParagraph(bookcode, currentID);
+  }
+  xhttp.open("GET", "https://gesab001.github.io/assets/egw/booklist.json");
+  xhttp.send();
+  
+}
+
+
+function showEgwParagraph(bookcode, currentID){
+
+    const url = "https://gesab001.github.io/assets/egw/"+bookcode+"/"+"book_"+bookcode+"_id_"+currentID+".json";
+ 
+
+	const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+			var paragraph = JSON.parse(this.responseText);
+			var word = paragraph["word"];
+			var page = paragraph["page"];
+			var bookcode = paragraph["bookcode"];
+			var paragraphN = paragraph["paragraph"];
+            //console.log("paragraph: " + JSON.stringify(paragraph));
+			document.getElementById("egw_paragraph").innerHTML = word;
+			document.getElementById("egw_paragraph_reference").innerHTML = "(White, E.G, " + bookcode + ", page " + page + ", paragraph " + paragraphN  + ")";
+			
+    }
+    xhttp.open("GET", url);
+    xhttp.send();	
+
+}
+
+function getCurrentEgwId(bookcode, total){
+	var date1 = new Date();
+    var date2 = new Date(2018, 5, 22);
+    if (bookcode==="DA"){
+       date2 = new Date(2016, 11, 30);
+    }
+    if (bookcode==="CL"){
+       date2 = new Date(2016, 4,15);
+    }
+    var difference = date1.getTime() - date2.getTime();
+    var minutesDifference = Math.floor(difference/1000/60/60/24);
+	//alert("days difference " +minutesDifference);
+    var currentID=minutesDifference;
+    return currentID % total;
+}
+
+fetchEGWBookList(topic);
+
+
+</script>
+
+<?php
+
+
+
+/*
+$topic_param = $_GET['topic'];
+
+
+
+function getTotalParagraphs($topic){
+	$booklist_url = "https://gesab001.github.io/assets/egw/booklist.json"; 
+    $json = file_get_contents($booklist_url);
+    $booklist_obj = json_decode( $json, true );
+	$total = 0;
+    foreach ($booklist_obj["items"] as $x) {
+		$bookcode = strtolower($x["bookcode"]);
+
+		if ($topic==$bookcode){
+		  $total = $x["total"];
+		}
+	}
+	return $total;
+}
+function getBookcode($topic){
+	$booklist_url = "https://gesab001.github.io/assets/egw/booklist.json"; 
+    $json = file_get_contents($booklist_url);
+    $booklist_obj = json_decode( $json, true );
+	$bookcode = "";
+    foreach ($booklist_obj["items"] as $x) {
+		$bookcode_string = strtolower($x["bookcode"]);
+
+		if ($topic==$bookcode_string){
+		  $bookcode = $x["bookcode"];
+
+		}
+	}
+	return $bookcode;
+}
+
+function getCurrentEgwId($total){
+	$now = time(); // or your date as well
+	//echo  date('m/d/Y', $now);
+	echo $now;
+	$your_date = strtotime("2018-05-22");
+	$datediff = $now - $your_date;
+	echo "$datediff " . $datediff;
+
+	$daysdiff = round($datediff /60/60/24);
+	echo "$daysdiff " . $daysdiff;
+
+	$currentID = $daysdiff % $total;
+	return $currentID;
+}
+
+function getParagraphString($url){
+   $json_obj = file_get_contents($url);
+   $paragraph_obj = json_decode( $json_obj);
+   return $paragraph_obj;   
+}
+
+$topic = strtolower($topic_param);
+$total = getTotalParagraphs($topic);
+
+$currentID = getCurrentEgwId($total);
+$bookcode = getBookcode($topic);
+$paragraph_url = "https://gesab001.github.io/assets/egw/" . $bookcode ."/" ."book_".$bookcode."_id_".$currentID.".json";
+$paragraph_obj = getParagraphString($paragraph_url);
+$word = $paragraph_obj->{'word'};
+$paragraph_no = $paragraph_obj->{'paragraph'};
+$bookcode_original = $paragraph_obj->{'bookcode'};
+$page = $paragraph_obj->{'page'};
+
+echo $word . " (" . $bookcode_original . ", " . $page . ", " . $paragraph_no . ")" ;
+
+*/
+?>
