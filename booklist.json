@@ -1,0 +1,409 @@
+{
+    "items": [
+        {
+            "total": 2590,
+            "bookcode": "DA",
+            "title": "The Desire of Ages"
+        },
+        {
+            "total": 1672,
+            "bookcode": "CG",
+            "title": "Child Guidance"
+        },
+        {
+            "total": 13084,
+            "bookcode": "TttC",
+            "title": "Testimonies to the Church"
+        },
+        {
+            "total": 981,
+            "bookcode": "Ed",
+            "title": "Education"
+        },
+        {
+            "total": 1225,
+            "bookcode": "1MCP",
+            "title": "Mind, Character, and Personality Volume 1"
+        },
+        {
+            "total": 1500,
+            "bookcode": "2MCP",
+            "title": "Mind, Character, and Personality Volume 2"
+        },
+        {
+            "total": 1901,
+            "bookcode": "GC",
+            "title": "The Great Controversy"
+        },
+        {
+            "total": 1126,
+            "bookcode": "LDE",
+            "title": "Last Day Events"
+        },
+        {
+            "total": 4720,
+            "bookcode": "MONEY",
+            "title": "Money"
+        },
+        {
+            "total": 1367,
+            "bookcode": "DEBT",
+            "title": "Debt"
+        },
+        {
+            "total": 271,
+            "bookcode": "SC",
+            "title": "Steps to Christ (1892, 1893)"
+        },
+        {
+            "total": 128,
+            "bookcode": "CL",
+            "title": "Country Living"
+        },
+        {
+            "total": 2213,
+            "bookcode": "PP",
+            "title": "Patriarchs and Prophets"
+        },
+        {
+            "total": 1763,
+            "bookcode": "PK",
+            "title": "Prophets and Kings"
+        },
+        {
+            "total": 1538,
+            "bookcode": "AA",
+            "title": "The Acts of the Apostles"
+        },
+        {
+            "total": 1500,
+            "bookcode": "MH",
+            "title": "The Ministry of Healing"
+        },
+        {
+            "total": 2460,
+            "bookcode": "Ev",
+            "title": "Evangelism"
+        },
+        {
+            "total": 3637,
+            "bookcode": "SDABC",
+            "title": "SDA Bible Commentary"
+        },
+        {
+            "total": 139,
+            "bookcode": "politic",
+            "title": "Politics"
+        },
+        {
+            "total": 4720,
+            "bookcode": "BIBLE",
+            "title": "Bible"
+        },
+        {
+            "total": 4237,
+            "bookcode": "FAST",
+            "title": "Fast"
+        },
+        {
+            "total": 16075,
+            "bookcode": "PRAY",
+            "title": "Pray"
+        },
+        {
+            "total": 6208,
+            "bookcode": "RICH",
+            "title": "Rich"
+        },
+        {
+            "total": 1285,
+            "bookcode": "WEALTH",
+            "title": "Wealth"
+        },
+        {
+            "total": 8518,
+            "bookcode": "HOUSE",
+            "title": "House"
+        },
+        {
+            "total": 153,
+            "bookcode": "HOTEL",
+            "title": "Hotel"
+        },
+        {
+            "total": 7510,
+            "bookcode": "LAND",
+            "title": "Land"
+        },
+        {
+            "total": 26766,
+            "bookcode": "HEAVEN",
+            "title": "Heaven"
+        },
+        {
+            "total": 680,
+            "bookcode": "SOIL",
+            "title": "Soil"
+        },
+        {
+            "total": 3157,
+            "bookcode": "SABBATH",
+            "title": "Sabbath"
+        },
+        {
+            "total": 29,
+            "bookcode": "CHRISTMAS",
+            "title": "Christmas"
+        },
+        {
+            "total": 27,
+            "bookcode": "BIRTHDAY",
+            "title": "Birthday"
+        },
+        {
+            "total": 73,
+            "bookcode": "HOLIDAYS",
+            "title": "Holidays"
+        },
+        {
+            "total": 47,
+            "bookcode": "NEW YEAR",
+            "title": "New Year"
+        },
+        {
+            "total": 18820,
+            "bookcode": "JESUS",
+            "title": "Jesus"
+        },
+        {
+            "total": 15460,
+            "bookcode": "SATAN",
+            "title": "Satan"
+        },
+        {
+            "total": 14410,
+            "bookcode": "ANGEL",
+            "title": "Angel"
+        },
+        {
+            "total": 1090,
+            "bookcode": "COL",
+            "title": "Christ's Object Lessons"
+        },
+        {
+            "total": 736,
+            "bookcode": "PAM",
+            "title": "Pastoral Ministry"
+        },
+        {
+            "total": 343,
+            "bookcode": "SECOND COMING",
+            "title": "Second Coming"
+        },
+        {
+            "total": 724,
+            "bookcode": "AMUSEMENT",
+            "title": "Amusement"
+        },
+        {
+            "total": 1074,
+            "bookcode": "SANCTUARY",
+            "title": "Sanctuary"
+        },
+        {
+            "total": 1554,
+            "bookcode": "CD",
+            "title": "Counsels on Diet and Foods"
+        },
+        {
+            "total": 3155,
+            "bookcode": "DISEASE",
+            "title": "Disease"
+        },
+        {
+            "total": 63904,
+            "bookcode": "WORK",
+            "title": "Work"
+        },
+        {
+            "total": 49808,
+            "bookcode": "SIN",
+            "title": "Sin"
+        },
+        {
+            "total": 3713,
+            "bookcode": "OVERCOME",
+            "title": "Overcome"
+        },
+        {
+            "total": 27375,
+            "bookcode": "FAITH",
+            "title": "Faith"
+        },
+        {
+            "total": 5084,
+            "bookcode": "FOOD",
+            "title": "Food"
+        },
+        {
+            "total": 29715,
+            "bookcode": "POWER",
+            "title": "Power"
+        },
+        {
+            "total": 17288,
+            "bookcode": "HOLY",
+            "title": "Holy"
+        },
+        {
+            "total": 107062,
+            "bookcode": "GOD",
+            "title": "God"
+        },
+        {
+            "total": 15289,
+            "bookcode": "CHURCH",
+            "title": "Church"
+        },
+        {
+            "total": 11739,
+            "bookcode": "MEET",
+            "title": "Meet"
+        },
+        {
+            "total": 32391,
+            "bookcode": "LIFE",
+            "title": "Life"
+        },
+        {
+            "total": 32391,
+            "bookcode": "LIFE",
+            "title": "Life"
+        },
+        {
+            "total": 6941,
+            "bookcode": "DEATH",
+            "title": "Death"
+        },
+        {
+            "total": 14468,
+            "bookcode": "HELP",
+            "title": "Help"
+        },
+        {
+            "total": 11341,
+            "bookcode": "EVIL",
+            "title": "Evil"
+        },
+        {
+            "total": 2054,
+            "bookcode": "MEAT",
+            "title": "Meat"
+        },
+        {
+            "total": 6205,
+            "bookcode": "GOSPEL",
+            "title": "Gospel"
+        },
+        {
+            "total": 726,
+            "bookcode": "HELL",
+            "title": "Hell"
+        },
+        {
+            "total": 9587,
+            "bookcode": "TEMPT",
+            "title": "Tempt"
+        },
+        {
+            "total": 23746,
+            "bookcode": "REST",
+            "title": "Rest"
+        },
+        {
+            "total": 15138,
+            "bookcode": "TEACH",
+            "title": "Teach"
+        },
+        {
+            "total": 2972,
+            "bookcode": "CREATE",
+            "title": "Create"
+        },
+        {
+            "total": 24094,
+            "bookcode": "RIGHT",
+            "title": "Right"
+        },
+        {
+            "total": 15268,
+            "bookcode": "EARTH",
+            "title": "Earth"
+        },
+        {
+            "total": 29327,
+            "bookcode": "WORLD",
+            "title": "World"
+        },
+        {
+            "total": 31787,
+            "bookcode": "HEART",
+            "title": "Heart"
+        },
+        {
+            "total": 25034,
+            "bookcode": "MIND",
+            "title": "Mind"
+        },
+        {
+            "total": 2679,
+            "bookcode": "WIFE",
+            "title": "Wife"
+        },
+        {
+            "total": 3351,
+            "bookcode": "HUSBAND",
+            "title": "Husband"
+        },
+        {
+            "total": 885,
+            "bookcode": "MUSIC",
+            "title": "Music"
+        },
+        {
+            "total": 1595,
+            "bookcode": "SONG",
+            "title": "Song"
+        },
+        {
+            "total": 10027,
+            "bookcode": "PLAN",
+            "title": "Plan"
+        },
+        {
+            "total": 1116,
+            "bookcode": "FIGHT",
+            "title": "Fight"
+        },
+        {
+            "total": 26043,
+            "bookcode": "WAR",
+            "title": "War"
+        },
+        {
+            "total": 5311,
+            "bookcode": "BATTLE",
+            "title": "Battle"
+        },
+        {
+            "total": 2203,
+            "bookcode": "CONFLICT",
+            "title": "Conflict"
+        },
+        {
+            "total": 1724,
+            "bookcode": "MIRACLE",
+            "title": "Miracle"
+        }
+    ]
+}
